@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>Anon404 — Request Access</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@300;400;600&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_user.css">
+</head>
+<body>
+
+  <!-- ambient layers -->
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="orbs" aria-hidden="true">
+    <span class="orb orb-a"></span><span class="orb orb-b"></span><span class="orb orb-c"></span>
+  </div>
+  <div class="grid-layer" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <!-- HUD status bar -->
+  <header class="hud">
+    <div class="hud-left">
+      <span class="sig-dot"></span>
+      <span class="hud-logo">404<b>//</b>SYNDICATE</span>
+    </div>
+    <div class="hud-right">
+      <span class="hud-badge">TLS·SECURE</span>
+      <span class="hud-clock" id="hudClock">--:--:--</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+
+      <!-- ABOUT / TERMINAL -->
+      <div class="glass terminal brackets reveal">
+        <div class="term-bar">
+          <span class="dot d-r"></span><span class="dot d-a"></span><span class="dot d-g"></span>
+          <span class="term-title">about_us.sh — Anon@root</span>
+        </div>
+        <div class="term-body">
+          <p class="cmd"><span class="prompt">root@Anon:~$</span> <span id="cmdWho"></span><span class="caret" id="caret1">▊</span></p>
+
+          <div class="about" id="aboutBlock">
+            <p class="kicker">// WHO WE ARE</p>
+            <h1>About <span>Us</span></h1>
+            <p class="about-text">By this group/gang we will talk about cybersecurity, AI, ethical hacking and we'll bring innovations to our systems, you will be able to learn tech stuff, ethical hacking by this gang.</p>
+            <p class="about-extra">No scripts. No shortcuts. Just operators building real skill — together.</p>
+            <ul class="chips">
+              <li>Cybersecurity</li>
+              <li>Artificial Intelligence</li>
+              <li>Ethical Hacking</li>
+              <li>Systems Innovation</li>
+            </ul>
+          </div>
+
+          <p class="cmd" id="cmdLine2"><span class="prompt">root@Anon:~$</span> <span id="cmdStatus"></span><span class="caret hidden" id="caret2">▊</span></p>
+        </div>
+      </div>
+
+      <!-- APPLICATION FORM -->
+      <div class="glass form-panel brackets reveal">
+        <div class="success-overlay" id="successOverlay" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27"/><path d="M21 33l8 8 15-17"/></svg>
+          <h3>TRANSMISSION RECEIVED</h3>
+          <p>your application is now pending review — stand by</p>
+        </div>
+
+        <p class="kicker">// APPLICATION FORM — 05 FIELDS</p>
+        <h2>Request <span>Access</span></h2>
+        <p class="form-sub">Submit your details to join the Anon404. Required fields are marked <em>*</em></p>
+
+        <form id="applyForm" novalidate>
+          <div class="field">
+            <input type="text" id="fName" placeholder=" " autocomplete="name">
+            <label for="fName">Full name <em>*</em></label>
+            <span class="msg"></span>
+          </div>
+
+          <div class="field">
+            <input type="email" id="fEmail" placeholder=" " autocomplete="email">
+            <label for="fEmail">Email address <em>*</em></label>
+            <span class="msg"></span>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <input type="tel" id="fPhone" placeholder=" " autocomplete="tel">
+              <label for="fPhone">Phone number <em>*</em></label>
+              <span class="msg"></span>
+            </div>
+            <div class="field">
+              <input type="text" id="fInsta" placeholder=" " autocomplete="off">
+              <label for="fInsta">Instagram <i>optional</i></label>
+              <span class="msg"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <input type="text" id="fYT" placeholder=" " autocomplete="off">
+            <label for="fYT">YouTube <i>optional</i></label>
+            <span class="msg"></span>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn-primary">
+            <span class="btn-label">Submit Application</span>
+            <span class="btn-spin"></span>
+          </button>
+          <p class="form-note">▸ Your data is transmitted over an encrypted channel and reviewed by admins only.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- topic ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="tgroup"><span>Ethical Hacking</span><span>▸</span><span>AI Systems</span><span>▸</span><span>Cybersecurity</span><span>▸</span><span>Innovation</span><span>▸</span><span>Zero-Day Research</span><span>▸</span><span>Red vs Blue</span><span>▸</span></div>
+        <div class="tgroup"><span>Ethical Hacking</span><span>▸</span><span>AI Systems</span><span>▸</span><span>Cybersecurity</span><span>▸</span><span>Innovation</span><span>▸</span><span>Zero-Day Research</span><span>▸</span><span>Red vs Blue</span><span>▸</span></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">© 2026 Anon404 - Lead by kaku · stay curious · stay ethical</footer>
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="user_app.js"></script>
+</body>
+</html>
